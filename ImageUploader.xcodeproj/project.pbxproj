@@ -6,13 +6,47 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A0399D602CE4E7A400FE6546 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A0399D5D2CE4E77D00FE6546 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A0399D682CE4EADA00FE6546 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A0399D672CE4EADA00FE6546 /* RealmSwift */; settings = {ATTRIBUTES = (Required, ); }; };
+		A0399D6B2CE4ECFA00FE6546 /* Realm in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A0399D692CE4ECFA00FE6546 /* Realm */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0399D502CE4E4FE00FE6546 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A0399D6B2CE4ECFA00FE6546 /* Realm in Embed Frameworks */,
+				A0399D602CE4E7A400FE6546 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A0399CDC2CE49C9000FE6546 /* ImageUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A0399CF42CE49F5C00FE6546 /* Exceptions for "ImageUploader" folder in "ImageUploader" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A0399CDB2CE49C9000FE6546 /* ImageUploader */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A0399CDE2CE49C9000FE6546 /* ImageUploader */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A0399CF42CE49F5C00FE6546 /* Exceptions for "ImageUploader" folder in "ImageUploader" target */,
+			);
 			path = ImageUploader;
 			sourceTree = "<group>";
 		};
@@ -23,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0399D682CE4EADA00FE6546 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				A0399CDE2CE49C9000FE6546 /* ImageUploader */,
+				A0399D632CE4EAAD00FE6546 /* Frameworks */,
 				A0399CDD2CE49C9000FE6546 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +81,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A0399D632CE4EAAD00FE6546 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -55,16 +98,21 @@
 				A0399CD82CE49C9000FE6546 /* Sources */,
 				A0399CD92CE49C9000FE6546 /* Frameworks */,
 				A0399CDA2CE49C9000FE6546 /* Resources */,
+				A0399D502CE4E4FE00FE6546 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A0399D6F2CE4ED8400FE6546 /* PBXTargetDependency */,
+				A0399D6D2CE4ED7500FE6546 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				A0399CDE2CE49C9000FE6546 /* ImageUploader */,
 			);
 			name = ImageUploader;
 			packageProductDependencies = (
+				A0399D672CE4EADA00FE6546 /* RealmSwift */,
+				A0399D692CE4ECFA00FE6546 /* Realm */,
 			);
 			productName = ImageUploader;
 			productReference = A0399CDC2CE49C9000FE6546 /* ImageUploader.app */;
@@ -94,6 +142,9 @@
 			);
 			mainGroup = A0399CD32CE49C9000FE6546;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A0399D642CE4EADA00FE6546 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A0399CDD2CE49C9000FE6546 /* Products */;
 			projectDirPath = "";
@@ -123,6 +174,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0399D6D2CE4ED7500FE6546 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A0399D6C2CE4ED7500FE6546 /* RealmSwift */;
+		};
+		A0399D6F2CE4ED8400FE6546 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A0399D6E2CE4ED8400FE6546 /* Realm */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A0399CE82CE49C9100FE6546 /* Debug */ = {
@@ -177,7 +239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -234,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -254,12 +316,16 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ImageUploader/Preview Content\"";
 				DEVELOPMENT_TEAM = JP39V77326;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ImageUploader/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to capture photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -268,6 +334,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = custom.ImageUploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_SKIP_AUTOLINKING_ALL_FRAMEWORKS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,12 +350,16 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ImageUploader/Preview Content\"";
 				DEVELOPMENT_TEAM = JP39V77326;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ImageUploader/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to capture photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,6 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = custom.ImageUploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_SKIP_AUTOLINKING_ALL_FRAMEWORKS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -324,6 +396,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A0399D5A2CE4E77D00FE6546 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A0399D642CE4EADA00FE6546 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0399D5D2CE4E77D00FE6546 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0399D5A2CE4E77D00FE6546 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		A0399D672CE4EADA00FE6546 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0399D642CE4EADA00FE6546 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		A0399D692CE4ECFA00FE6546 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0399D642CE4EADA00FE6546 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		A0399D6C2CE4ED7500FE6546 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0399D642CE4EADA00FE6546 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		A0399D6E2CE4ED8400FE6546 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0399D642CE4EADA00FE6546 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0399CD42CE49C9000FE6546 /* Project object */;
 }
